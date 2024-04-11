@@ -19,6 +19,7 @@ const bsOptions: Options = {
   notify: false,
   // Document Root
   server: TARGET.dir,
+  startPath: 'sample\\',
   // Use HTTPS
   https: {
     key: 'C:\\xampp\\apache\\conf\\ssl.key\\server.key',

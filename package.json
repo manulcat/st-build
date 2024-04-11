@@ -1,8 +1,9 @@
 {
   "name": "st-build",
   "version": "1.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "node ./scripts/main.js"
+    "dev": "node ./scripts/main.mjs"
   },
   "dependencies": {
     "autoprefixer": "^10.4.12",
