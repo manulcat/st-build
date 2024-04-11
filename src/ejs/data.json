@@ -1,0 +1,15 @@
+{
+  "site": {
+    "title": "EJS Sample"
+  },
+  "pages": [
+    {
+      "title": "Home",
+      "description": "EJS Sample"
+    },
+    {
+      "title": "About",
+      "description": "EJS Sample"
+    }
+  ]
+}
