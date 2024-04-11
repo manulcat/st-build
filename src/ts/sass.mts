@@ -13,11 +13,9 @@ type Settings = [
   }
 ];
 
-type MyOutput = {
+type SassOptions = {
   style: sass.OutputStyle;
 };
-
-type SassOpt = MyOutput[];
 
 // Input/Output settings
 const IO_SETTINGS: Settings = [
@@ -40,7 +38,7 @@ function build(ioSettings: Settings) {
       watcher.on('change', (path) => {
         console.log('[\u001b[34mChokidar\u001b[0m] Modified [' + index + ']: ' + path);
         // Sass options
-        const sassOptions: SassOpt = [
+        const sassOptions: SassOptions[] = [
           {
             style: 'expanded',
           },

@@ -17,6 +17,7 @@ const bsOptions = {
     notify: false,
     // Document Root
     server: TARGET.dir,
+    startPath: 'sample\\',
     // Use HTTPS
     https: {
         key: 'C:\\xampp\\apache\\conf\\ssl.key\\server.key',
@@ -26,12 +27,13 @@ const bsOptions = {
         // Use SSI
         {
             match: /<!--#include virtual="(.+?)"-->/g,
-            fn: (req, res, match, filename) => {
-                const filePath = path.join(TARGET.dir, filename.replace(/\.\.\//g, ''));
+            fn: (req, res, match) => {
+                const getFileName = match.match(/<!--#include virtual="(?<filename>.+?)"-->/g);
+                const filePath = path.join(TARGET.dir, getFileName.groups.filename.replace(/\.\.\//g, ''));
                 if (!fs.existsSync(filePath)) {
                     return `<span style="color: red">${filePath} could not be found</span>`;
                 }
-                return fs.readFileSync(filePath);
+                return fs.readFileSync(filePath).toString();
             },
         },
         // Adjust Relative Path
