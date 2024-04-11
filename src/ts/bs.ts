@@ -2,7 +2,6 @@
 import fs from 'fs';
 import path from 'path';
 import { create as bsCreate, Options } from 'browser-sync';
-import http from 'http';
 const bs = bsCreate();
 
 // Target Name
@@ -29,12 +28,13 @@ const bsOptions: Options = {
     // Use SSI
     {
       match: /<!--#include virtual="(.+?)"-->/g,
-      fn: (req: http.IncomingMessage, res: http.ServerResponse, match: string, filename: string) => {
-        const filePath = path.join(TARGET.dir, filename!.replace(/\.\.\//g, ''));
+      fn: (req, res, match) => {
+        const getFileName = match.match(/<!--#include virtual="(?<filename>.+?)"-->/g);
+        const filePath = path.join(TARGET.dir, getFileName!.groups!.filename.replace(/\.\.\//g, ''));
         if (!fs.existsSync(filePath)) {
           return `<span style="color: red">${filePath} could not be found</span>`;
         }
-        return fs.readFileSync(filePath);
+        return fs.readFileSync(filePath).toString();
       },
     },
     // Adjust Relative Path
