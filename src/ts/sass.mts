@@ -5,6 +5,7 @@ import * as sass from 'sass';
 import postcss from 'postcss';
 import autoprefixer from 'autoprefixer';
 
+// Input/Output settings
 type Settings = [
   {
     fileName: string;
@@ -12,12 +13,6 @@ type Settings = [
     outputDir: string;
   }
 ];
-
-type SassOptions = {
-  style: sass.OutputStyle;
-};
-
-// Input/Output settings
 const IO_SETTINGS: Settings = [
   {
     fileName: 'style',
@@ -38,6 +33,9 @@ function build(ioSettings: Settings) {
       watcher.on('change', (path) => {
         console.log('[\u001b[34mChokidar\u001b[0m] Modified [' + index + ']: ' + path);
         // Sass options
+        type SassOptions = {
+          style: sass.OutputStyle;
+        };
         const sassOptions: SassOptions[] = [
           {
             style: 'expanded',

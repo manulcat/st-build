@@ -4,7 +4,6 @@ import chokidar from 'chokidar';
 import * as sass from 'sass';
 import postcss from 'postcss';
 import autoprefixer from 'autoprefixer';
-// Input/Output settings
 const IO_SETTINGS = [
     {
         fileName: 'style',
@@ -23,7 +22,6 @@ function build(ioSettings) {
             // Watcher events
             watcher.on('change', (path) => {
                 console.log('[\u001b[34mChokidar\u001b[0m] Modified [' + index + ']: ' + path);
-                // Sass options
                 const sassOptions = [
                     {
                         style: 'expanded',
