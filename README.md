@@ -2,13 +2,13 @@
 
 静的サイト用のビルドツールです。
 
-# インストール
+## インストール
 
 ```bash
 npm install
 ```
 
-# 実行
+## 実行
 
 BrowserSync によるホットリロード、EJS のコンパイル、Sass のコンパイルを監視・実行します。
 
@@ -16,7 +16,7 @@ BrowserSync によるホットリロード、EJS のコンパイル、Sass の�
 npm run dev
 ```
 
-# 画像圧縮
+## 画像圧縮
 
 imagemin を使用した画像圧縮を行います。
 
@@ -24,7 +24,7 @@ imagemin を使用した画像圧縮を行います。
 npm run dev
 ```
 
-# TypeScript
+## TypeScript
 
 TypeScript のコンパイルを行います。
 
