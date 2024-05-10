@@ -21,7 +21,7 @@ npm run dev
 imagemin を使用した画像圧縮を行います。
 
 ```bash
-npm run dev
+npm run img
 ```
 
 ## TypeScript
