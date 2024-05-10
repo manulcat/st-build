@@ -10,7 +10,7 @@ npm install
 
 # 実行
 
-BrowserSync によるホットリロード、EJS のコンパイル、Sass のコンパイルを実行します。
+BrowserSync によるホットリロード、EJS のコンパイル、Sass のコンパイルを監視・実行します。
 
 ```bash
 npm run dev
