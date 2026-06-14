@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "target": "esnext",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "rootDir": "lib/ts",
+    "outDir": "lib/js",
+    "strict": true
+  },
+  "include": ["lib/ts/**/*", "lib/ts/.config.ts", "types/**/*"]
+}
