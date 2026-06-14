@@ -13,7 +13,7 @@ export declare const bsconfig: {
     };
     readonly files: {
         readonly dir: "dist";
-        readonly ext: "html, css, js";
+        readonly ext: "html,css,js";
     };
     readonly startPath: "path/to/start/path";
     readonly https: {
