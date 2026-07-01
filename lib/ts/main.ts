@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 /**
  * Entry point for the build system.
  * Runs all watchers by default, or a specific watcher

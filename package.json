@@ -3,6 +3,9 @@
   "version": "2.0.0",
   "description": "",
   "type": "module",
+  "bin": {
+    "st-build": "lib/js/main.js"
+  },
   "scripts": {
     "dev": "node lib/js/main.js",
     "ejs": "node lib/js/main.js ejs",
@@ -14,16 +17,23 @@
   },
   "dependencies": {
     "@parcel/watcher": "^2.5.6",
-    "autoprefixer": "^10.5.0",
+    "autoprefixer": "^10.5.2",
     "browser-sync": "^3.0.4",
     "cssnano": "^8.0.1",
     "ejs": "^6.0.1",
-    "js-beautify": "^1.15.4",
+    "js-beautify": "^2.0.3",
     "modern-normalize": "^3.0.1",
-    "postcss": "^8.5.8",
+    "postcss": "^8.5.16",
     "postcss-discard-comments": "^8.0.0",
     "postcss-import": "^16.1.1",
-    "sharp": "^0.35.1",
+    "sharp": "^0.35.3"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.62.1",
+    "@typescript-eslint/parser": "^8.62.1",
+    "eslint": "^10.6.0",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.9.4",
     "typescript": "^6.0.3"
   }
 }
